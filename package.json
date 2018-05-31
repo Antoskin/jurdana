@@ -1,0 +1,23 @@
+{
+  "name": "jurdana",
+  "version": "1.0.0",
+  "description": "zati4ka",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antoskin/jurdana.git"
+  },
+  "author": "ant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Antoskin/jurdana/issues"
+  },
+  "homepage": "https://github.com/Antoskin/jurdana#readme",
+  "dependencies": {
+    "gsap": "^2.0.1",
+    "jquery": "^3.3.1"
+  }
+}

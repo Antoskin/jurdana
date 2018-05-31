@@ -1,0 +1,200 @@
+
+@font-face {
+    font-family: 'Charter';
+    src: url("../font/CharterBoldBT.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url("../font/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto-light';
+    src: url("../font/Roboto-Light.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto-light';
+    color: #fff;
+}
+
+
+$bl1: #212b4a;
+$bl2: #5067b0;
+$black: #383938;
+$white: #fff;
+$grey: #ccc;
+$t: tomato;
+
+h1 {
+    font-family: 'Charter';
+    font-size: 96px;
+    line-height: 100px;
+    letter-spacing: 0em;
+}
+
+h2 {
+    font-family: 'Charter';
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 0em;
+}
+
+h3 {
+    font-family: 'Charter';
+    font-size: 30px;
+    line-height: 20px;
+    letter-spacing: 0em;
+}
+
+p {
+    font-family: 'Roboto-light';
+    font-size: 13px;
+    opacity: .7;
+}
+a {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#main-wrapper {
+    width: 100%;
+    display: flex;
+    .left-side {
+        width: 50%;
+        height: 100vh;
+        border-right: 1px solid #4b536c;
+        overflow: hidden;
+        background: $black;
+    }
+    .right-side {
+        width: 50%;
+        height: 100vh;
+        background: $bl1;
+    }
+    .central-block {
+       
+        position: absolute;
+        top: 55px;
+        left: 90px;
+        right: 90px;
+        bottom: 55px;
+        .central-block_wrap {
+            width: 100%;
+            height: 100%;
+            //border: 1px solid $t;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            .top-line {
+                display: flex;
+                justify-content: space-between;
+                //border: 1px solid orangered;
+                .lang-switch {
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        margin-left: 10px;
+                    }
+                    .activ {
+                        font-weight: bold;
+                    }
+                    
+                }
+            }
+            .middle-line {
+                height: 380px;
+                width: 100%;
+                //border: 1px solid red;
+                margin: auto 0;
+                display: flex;
+                justify-content: space-between;
+                .middle-left {
+                    //border: 1px dashed #fff;
+                    width: 100px;
+                }
+                .middle-centr {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .middle-center-top {
+                        //border: 1px dashed #fff;
+                        height: 30px;
+                        text-align: center
+                    }
+                    .middle-center-mid {
+                        //border: 1px dashed #fff;
+                        height: 90%;
+                        text-align: center;
+                        h1{text-align: center}
+                    }
+                    .middle-center-bot {
+                        //border: 1px dashed #fff;
+                        height: 30px;
+                        text-align: center;
+                        .btn-next {
+                            animation: topDown .9s infinite;
+                            
+                        }
+                    }
+                }
+                .middle-right {
+                    //border: 1px dashed #fff;
+                    width: 100px;
+                }
+            }
+            .bottom-line {
+                height: 44px;
+                //border: 1px solid green;
+                display: flex;
+                justify-content: space-between;
+                .bottom-left {
+                    //border: 1px solid greenyellow;
+                    display: flex;
+                    align-items: flex-end;
+                }
+                .bottom-middle {
+                   // border: 1px solid greenyellow;
+                    display: flex;
+                    align-items: flex-end;
+                    .email {
+                        margin: 0 10px;
+                    }
+                    a {
+                        font-size: 15px;
+                        opacity: .7
+                    }
+                }
+                .bottom-right {
+                    display: flex;
+                    align-items: flex-end;
+                    //border: 1px solid greenyellow
+                }
+            }
+        }
+    }
+}
+
+@keyframes topDown {
+    0% {
+       margin-top: 0
+    }
+    50% {
+        margin-top: 10px
+    }
+    100% {
+        margin-top: 0
+    }
+}
+
+
+@media(max-width: 1400px) {
+    h1 {
+        font-size: 60px;
+        line-height: 80px;
+    }
+}
