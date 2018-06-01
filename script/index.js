@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import { openLeftSlide, openRightSlide, closeLeftSlide, closeRightSlide } from './slides/animation'
-
+import scrollDown from './slides/scrollDown'
 
 $('document').ready( function() {
     $(`.btn-left`).click( () => openLeftSlide() ) //open left
@@ -12,16 +12,17 @@ $('document').ready( function() {
     $(`.r-s-close`).click( () =>  {
         closeRightSlide()
         setTimeout( () => {
-            $(`.send-btn-lef`).css({'opacity':1})
-        }, 666 )
-    } ) //close
+            $(`.send-btn-lef`).css({'opacity':1})}, 666 )
+    } )
 
     $(`.send-btn-lef`).click( function() {
         $(this).css({'opacity':'0'})
-
         setTimeout( () => {
-            openRightSlide()
-        }, 666 )
+            openRightSlide()}, 666 )
         
     })
+
+
+
+    scrollDown()
 })
