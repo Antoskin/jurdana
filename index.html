@@ -10,13 +10,65 @@
 <body>
     
     <div id="main-wrapper">
-        <div class="left-side">
+        <div class="sibling-side left-side">
             <!-- <video width="" height="100%" autoplay muted loop id="myVideo">
                 <source src="./img/movi.mp4" type="video/mp4">
             </video> -->
+            <div class="sib-slider left-slider">
+                <div class="left-slide-top">
+                    <div class="slide-dots-back"></div>
+                    <div class="l-s-close">
+                        <img width="15" src="./img/arow 1.svg" alt="">
+                        <span>CLOSE</span>
+                        <img width="15" src="./img/arow 2.svg" alt="">
+                    </div>
+                </div>
+                <div class="left-slide-mid">
+                    <p>Legal services</p>
+                    <h3>Our services</h3>
+                    <nav>
+                            <a href="#">Real estate & construction</a>
+                            <a href="#">Corporate & Antitrust</a>
+                            <a href="#">Intellectual property</a>
+                            <a href="#">White collar crime</a>
+                            <a href="#">Taxation</a>
+                            <a href="#">Dispute resolution</a>
+                            <a href="#">Private clients</a>
+                    </nav>
+                    <div class="send-btn-lef">
+                        Contact Us
+                    </div>
+                </div>
+                <div class="left-slide-bot"></div>
+            </div>
         </div>
-        <div class="right-side"></div>
-
+        <div class="sibling-side right-side">
+            <div class="sib-slider right-slider">
+                    <div class="sib-slider right-slider">
+                            <div class="right-slide-top">
+                                <div class="slide-dots-back"></div>
+                                <div class="r-s-close">
+                                    <img width="15" src="./img/arow 1.svg" alt="">
+                                    <span>CLOSE</span>
+                                    <img width="15" src="./img/arow 2.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="right-slide-mid">
+                                <p>FEEDBACK FORM</p>
+                                <h3>Contact us</h3>
+                                <form id="contact-form" action="#">
+                                    <input class="in-area" type="text" placeholder="Your name">
+                                    <input class="in-area" type="text" placeholder="Your phone number">
+                                    <input class="in-area" type="text" placeholder="Your @">
+                                    <input class="in-area" type="text" placeholder="Your message">
+                                    <input class="sendMsg" type="submit" value="Send">
+                                </form>
+                            </div>
+                            <div class="right-slide-bot"></div>
+                        </div>
+            </div>
+        </div>
+        <!-- MAIN central wrapper -->
         <div class="central-block">
             <div class="central-block_wrap">
                 <div class="top-line">
@@ -29,7 +81,16 @@
                     </div>
                 </div>
                 <div class="middle-line">
-                    <div class="middle-left"></div>
+                    <div class="middle-sib middle-left">
+                        <div class="btn-wrap btn-left">
+                            <div class="dots">
+                                <span class="dot dot-one"></span>
+                                <span class="dot dot-two"></span>
+                                <span class="dot dot-three"></span>
+                            </div>
+                            <p class="btn-text">OUR SERVICES</p>
+                        </div>
+                    </div>
                     <div class="middle-centr">
                         <div class="middle-center-top">
                             <p>ATTORNEYS AT LAW</p>
@@ -43,7 +104,16 @@
                             <img class="btn-next" height="30" src="./img/mouse.svg" alt="">
                         </div>
                     </div>
-                    <div class="middle-right"></div>
+                    <div class="middle-sib middle-right">
+                        <div class="btn-wrap btn-right">
+                            <p class="btn-text">CONTACT US</p>
+                            <div class="dots">
+                                <span class="dot dot-three"></span>
+                                <span class="dot dot-two"></span>
+                                <span class="dot dot-one"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="bottom-line">
                     <div class="bottom-left">
@@ -68,7 +138,6 @@
         </div>
     </div>
 
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./script/index.js"></script>
+    <script src="./dist/main.js"></script>
 </body>
 </html>
