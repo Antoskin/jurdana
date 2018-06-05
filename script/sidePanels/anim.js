@@ -1,4 +1,4 @@
-import { TweenLite, TweenMax } from 'gsap'
+import { TweenLite } from 'gsap'
 
 export const openLeftSlide = () => {
     TweenLite.to(`.left-slider`, .5, {'left': 0})
@@ -24,7 +24,34 @@ export const closeRightSlide = () => {
     TweenLite.to(`.right-slider`, .5, {'right': '-95%'}).delay(1.5)
 }
 
-export const changeText = () => {
-    TweenLite.fromTo(`.h1-target`, .5, { opacity: 1 }, { opacity: 0 },.5)
-    TweenLite.fromTo(`.h1-target`, .5, { opacity: 0 }, { opacity: 1 },.5).delay(1)
+
+//mobi
+
+export const openLeftSlideMobil = () => {
+    TweenLite.to(`.left-slider`, .5, {
+        'position': 'fixed',
+        'top': 0,
+        'bottom': 0,
+        'height': '100%',
+        'zIndex': 101
+    })
+    TweenLite.fromTo(`.left-slide-mid, .left-slide-top, .left-slide-bot`, .5, { opacity:0, 'visibility':'hidden' }, { opacity: 1, 'visibility':'visible' },.5  ).delay(1.5)
+}
+
+
+
+export const closeLeftSlideMobil = () => {
+    TweenLite.fromTo(`.left-slide-mid, .left-slide-top, .left-slide-bot`, .5, { opacity: 1, 'visibility':'visible' }, { opacity:0, 'visibility':'hidden' },.5  )
+    // TweenLite.to(`.left-slider`, .5, {
+    //     left: '-50%',
+    //     right: 'inherit'
+    // })
+    TweenLite.to(`.left-slider`, .5, {
+        'position': 'absolute',
+        'top': '-55%',
+        'bottom': 'inherit',
+        'height': '60%',
+        'zIndex': 100
+    }).delay(1.5)
+   
 }

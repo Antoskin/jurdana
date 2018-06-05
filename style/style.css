@@ -57,6 +57,7 @@ a {
 #main-wrapper {
   width: 100%;
   display: flex;
+  height: 100vh;
 }
 
 #main-wrapper .sibling-side {
@@ -216,6 +217,15 @@ a {
   background: rgba(80, 103, 176, 0.96);
   left: -95%;
 }
+#main-wrapper .left-side .left-slider .action-left {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 5px;
+  text-align: center;
+  display: none
+}
 
 #main-wrapper .right-side {
   background: #212b4a;
@@ -266,14 +276,13 @@ a {
 }
 
 #main-wrapper .central-block .central-block_wrap .middle-line .middle-sib {
-  width: 250px;
+  width: 300px;
   display: flex;
   align-items: center;
 }
 
 #main-wrapper .central-block .central-block_wrap .middle-line .middle-sib .btn-wrap {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   cursor: pointer;
@@ -320,6 +329,7 @@ a {
 #main-wrapper .central-block .central-block_wrap .middle-line .middle-sib .btn-wrap .btn-text {
   letter-spacing: 3px;
   transition: .3s ease-in-out;
+  margin: 0 10px;
 }
 
 #main-wrapper .central-block .central-block_wrap .middle-line .middle-centr {
@@ -333,9 +343,15 @@ a {
   text-align: center;
 }
 
+#main-wrapper .central-block .central-block_wrap .middle-line .middle-centr .middle-center-top p {
+  letter-spacing: 3px;
+}
+
 #main-wrapper .central-block .central-block_wrap .middle-line .middle-centr .middle-center-mid {
   height: 90%;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 #main-wrapper .central-block .central-block_wrap .middle-line .middle-centr .middle-center-mid h1 {
@@ -383,10 +399,10 @@ a {
 
 @keyframes biSmall {
   0% {
-    transform: scale(1);
+    transform: scale(0.8);
   }
   50% {
-    transform: scale(1.4);
+    transform: scale(1);
   }
   100% {
     transform: scale(0.3);
@@ -423,6 +439,101 @@ a {
     line-height: 80px;
     max-width: 610px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 1250px) {
+  #main-wrapper .central-block .central-block_wrap .bottom-line .bottom-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #main-wrapper .central-block .central-block_wrap .bottom-line .bottom-middle a {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 1080px) {
+  h1 {
+    font-size: 47px;
+    line-height: 71px;
+  }
+  #main-wrapper .central-block {
+    left: 44px;
+    right: 44px;
+  }
+}
+
+@media (max-width: 840px) {
+  #main-wrapper .central-block .central-block_wrap .bottom-line .bottom-middle .location {
+    max-width: 240px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  #main-wrapper {
+    overflow-y: hidden !important;
+  }
+  #main-wrapper .central-block .central-block_wrap .bottom-line {
+    background: #212b4a;
+  }
+  #main-wrapper .central-block .central-block_wrap .bottom-line .bottom-middle, #main-wrapper .central-block .central-block_wrap .middle-line .middle-sib, .link-logo, .back-video, #main-wrapper .central-block .central-block_wrap .middle-line .middle-centr .middle-center-bot {
+    display: none;
+  }
+  #main-wrapper .central-block .central-block_wrap .top-line {
+    justify-content: center;
+  }
+  #main-wrapper .central-block .central-block_wrap .top-line .lang-switch a {
+    margin: 0 5px;
+  }
+  #main-wrapper .central-block {
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  #main-wrapper .sibling-side .sib-slider {
+    top: -55%;
+    left: 0;
+    right: 0;
+    bottom: inherit;
+  }
+  #main-wrapper .central-block .central-block_wrap .bottom-line .bottom-left, #main-wrapper .central-block .central-block_wrap .bottom-line .bottom-right {
+    align-items: center;
+    padding: 0 10px;
+  }
+  h1 {
+    font-size: 38px;
+    line-height: 40px;
+  }
+  .bottom-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom-middle a {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom-middle a img {
+    margin-bottom: 10px;
+  }
+  .location {
+    max-width: 240px;
+    text-align: center;
+  }
+  #main-wrapper .central-block .central-block_wrap .middle-line {
+    height: 100%;
+    width: 100%;
+    margin: auto 0;
+    display: flex;
+    justify-content: space-between;
+    max-height: 355px;
+  }
+  #main-wrapper .left-side .left-slider .action-left {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */
