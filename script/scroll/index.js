@@ -2,36 +2,40 @@ import $ from 'jquery'
 import { changeText } from './animation'
 import def_text from './text_list.js'
 
-export default function() {
+import mobSwitch from './mobiSwitch'
 
+export default function() {
+    
 
     var num = 0,
-        timer
+        timer,
+        animaTime
     $(window).bind('mousewheel', function(event) {
+        
+
+        if( animaTime ) clearInterval(animaTime)
+
+        animaTime = setTimeout( function() {
+            changeText()
+        },100 )
 
         if( timer ) clearTimeout(timer)
 
         timer = setTimeout( function() {
            if (event.originalEvent.wheelDelta >= 0) {
-                changeText()
-                setTimeout( () => {
-                        $(`.h1-target`).text(def_text[num]['text'])
-                        { num < 1 ? num = 3 : num-- }
-                },500 )
+                $(`.h1-target`).html(def_text[num]['text'])
+                { num < 1 ? num = 3 : num-- }
+               
             }
             else {
-                changeText()
-                setTimeout( () => {
-                    $(`.h1-target`).text(def_text[num]['text'])
-                    { num < 3 ? num++ : num = 0  }
-                },500 )
-                
+                $(`.h1-target`).html(def_text[num]['text'])
+                { num < 3 ? num++ : num = 0  }
             }
-        },1000 )
+        },1200 )
  
     });
 
 
-   
-
+    mobSwitch()
 }
+

@@ -62,7 +62,7 @@ export const closeLeftSlideMobil = () => {
 
     TweenLite.to(`.left-slider`, .5, {
             'position': 'absolute',
-            'top': '-55%',
+            'top': '-53%',
             'bottom': 'inherit',
             'height': '60%',
             'zIndex': 100,
@@ -76,9 +76,8 @@ export const openRightSlideMobil = () => {
     TweenLite.to(`.right-slider`, .5, {
         'position': 'fixed',
         'top': 0,
-        'bottom': 0,
+        'zIndex': 101,
         'height': '100%',
-        'zIndex': 101
     })
     TweenLite.to(`.action-right`, .5, { 'opacity': 0, 'display': 'none' })
     TweenLite.fromTo(`.right-slide-mid, .right-slide-top, .right-slide-bot`, .5, 
@@ -102,7 +101,7 @@ export const closeRightSlideMobil = () => {
 
     TweenLite.to(`.right-slider`, .5, {
             'position': 'absolute',
-            'top': '-55%',
+            'top': '-53%',
             'bottom': 'inherit',
             'height': '60%',
             'zIndex': 100,

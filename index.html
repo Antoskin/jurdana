@@ -12,16 +12,17 @@
     
     <div id="main-wrapper">
         <div class="sibling-side left-side">
-        <video class="back-video" height="100%" poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
-            <source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
+        <video class="back-video"  id="bgvid" playsinline autoplay muted loop>
+            <source src="./img/bback.mp4" type="video/mp4">
         </video>
             <div class="sib-slider left-slider">
                 <div class="left-slide-top">
                     <div class="slide-dots-back"></div>
                     <div class="l-s-close">
-                        <img width="15" src="./img/arow 1.svg" alt="">
-                        <span>CLOSE</span>
-                        <img width="15" src="./img/arow 2.svg" alt="">
+                        <img class="m-c" width="15" src="./img/arow 1.svg" alt="">
+                        <span class="m-c">CLOSE</span>
+                        <img class="m-c" width="15" src="./img/arow 2.svg" alt="">
+                        <img class="m-o" src="./img/m-close.png" alt="">
                     </div>
                 </div>
                 <div class="left-slide-mid">
@@ -49,9 +50,10 @@
                 <div class="right-slide-top">
                     <div class="slide-dots-back"></div>
                     <div class="r-s-close">
-                        <img width="15" src="./img/arow 1.svg" alt="">
-                        <span>CLOSE</span>
-                        <img width="15" src="./img/arow 2.svg" alt="">
+                        <img class="m-c" width="15" src="./img/arow 1.svg" alt="">
+                        <span class="m-c">CLOSE</span>
+                        <img class="m-c" width="15" src="./img/arow 2.svg" alt="">
+                        <img class="m-o" src="./img/m-close.png" alt="">
                     </div>
                 </div>
                 <div class="right-slide-mid">
@@ -61,7 +63,7 @@
                         <input class="in-area" type="text" placeholder="Your name">
                         <input class="in-area" type="text" placeholder="Your phone number">
                         <input class="in-area" type="text" placeholder="Your @">
-                        <textarea class="in-area" type="text" placeholder="Your message"></textarea>
+                        <textarea class="in-area textareas " type="text" placeholder="Your message" resize="none" ></textarea>
                         <input class="sendMsg" type="submit" value="Send">
                     </form>
                 </div>
@@ -94,12 +96,14 @@
                     </div>
                     <div class="middle-centr">
                         <div class="middle-center-top">
-                            <p>ATTORNEYS AT LAW</p>
+                            <p>ATTORNEYS’ ASSOCIATION</p>
                         </div>
                         <div class="middle-center-mid">
+                            <i class="fas fa-chevron-left"></i>
                             <h1 class="h1-target">
-                                Plus usus doctrina, guam citra usum doctrina valet
+                                We assist in decision-making & solving complicated legal issues
                             </h1>
+                            <i class="fas fa-chevron-right"></i>
                         </div>
                         <div class="middle-center-bot">
                             <img class="btn-next" height="30" src="./img/mouse.svg" alt="">
@@ -121,17 +125,16 @@
                         <p class="copir-t">All rights reserved © Jurdana, 2018</p>
                     </div>
                     <div class="bottom-middle">
-                        <a href="#">
-                            <!-- <img width="15" src="./img/telephone.svg" alt="phone">  -->
-                            <i class="fas fa-phone"></i> +38 (044) 574-84-90
+                        <a href="tel:+380445748490">
+                            <i class="fas fa-mobile-alt"></i> +38 (044) 574-84-90
                         </a>
-                        <a class="email" href="#">
-                            <!-- <img width="15" src="./img/mail.svg" alt="phone">  -->
+                        <a class="email" href="mailto:info@jurdana.com.ua">
                             <i class="fas fa-envelope"></i> info@jurdana.com.ua
                         </a>
                         <a class="location"href="#">
                                 <!-- <img width="15" src="./img/point.svg" alt="phone">  -->
-                            <i class="fas fa-compass"></i> Kyiv, Ukraine st. Sribnokilsky 22 оffice 194, PO Box 58
+                            <i class="fas fa-compass"></i> 22 Sribnokilska, Str.Kyiv 02095, Ukraine
+                            
                         </a>
                     </div>
                     <div class="bottom-right">

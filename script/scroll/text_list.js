@@ -1,8 +1,8 @@
 const def_text = [
-        { 'text' : 'Plus usus doctrina guam citra usum doctrina valet'},
-        { 'text' : 'Plus doctrina guam citra usum doctrina valet'},
-        { 'text' : 'Plus usum doctrina valet'},
-        { 'text' : 'Plus usus doctrina guam '}
+        { 'text' : `We are a team of bar-admitted lawyers with more than 10-year experience` },
+        { 'text' : `We provide a comprehensive legal support to businesses & represent our clients in courts`},
+        { 'text' : `We assist in decision-making & solving complicated legal issues`},
+        { 'text' : `Our litigation team is the key to protecting your interests`}
 ]
 
 
