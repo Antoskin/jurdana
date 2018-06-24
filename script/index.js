@@ -1,16 +1,18 @@
 import $ from 'jquery'
 import scrollDown from './scroll'
 import sidePanels from './sidePanels'
+import lang from './allLang'
 
 $('document').ready( function() {
 
     scrollDown()
     sidePanels()
+    lang()
 
     $(window).resize( () => inspectWidth())
     inspectWidth()
 
-    //changeCopiright()
+   
 })
 
 // if mobile size, put contacts to middle div

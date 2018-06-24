@@ -5,30 +5,24 @@ import def_text from './text_list.js'
 import mobSwitch from './mobiSwitch'
 
 export default function() {
-   
+    switchActiveLang()
 
-
-    let say = def_text.slice(0,4)
+    let say = def_text.slice(0,5)
 
    $(`.lang-switch a`).click(function() {
        if( $(this).attr('data-lang') == 0 ) {
-         
-            say = def_text.slice(0,4)
+        $(`.h1-target`).html(def_text[3]['text'])
+            say = def_text.slice(0,5)
        } else if( $(this).attr('data-lang') == 1 ) {
-         
-            say = def_text.slice(4,8)
+            $(`.h1-target`).html(def_text[6]['text'])
+            say = def_text.slice(5,9)
        }
    })
-
-   console.log(say);
 
     var num = 0,
         timer,
         animaTime
     $(window).bind('mousewheel', function(event) {
-        console.log(say);
-        this.console.log(`text`,def_text)
-
         if( animaTime ) clearInterval(animaTime)
 
         animaTime = setTimeout( function() {
@@ -40,12 +34,12 @@ export default function() {
         timer = setTimeout( function() {
            if (event.originalEvent.wheelDelta >= 0) {
                 $(`.h1-target`).html(say[num]['text'])
-                { num < 1 ? num = 3 : num-- }
+                { num < 1 ? num = 4 : num-- }
                
             }
             else {
                 $(`.h1-target`).html(say[num]['text'])
-                { num < 3 ? num++ : num = 0  }
+                { num < 4 ? num++ : num = 0  }
             }
         },1200 )
  
@@ -54,3 +48,12 @@ export default function() {
     mobSwitch()
 }
 
+
+
+const switchActiveLang = () => {
+    $(`.lang-switch a`).click( function() {
+        $(`.lang-switch a`).removeClass(`activ`)
+        $(this).addClass(`activ`)
+
+    } )
+}
